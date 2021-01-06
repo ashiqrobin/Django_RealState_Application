@@ -80,8 +80,11 @@ WSGI_APPLICATION = 'realstate.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rstate',
+        'USER': 'postgres',
+        'PASSWORD': 'Robin1122#',
+        'HOST': 'localhost',
     }
 }
 
@@ -127,3 +130,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [STATIC_DIR,]
+
+# Media File Setting
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'

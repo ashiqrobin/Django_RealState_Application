@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
+
+
 {% load humanize %}
+{% load static %}
+
+{% block title %} | Welcome {% endblock %}
 
 {% block content %}
 <!-- Showcase -->
@@ -65,6 +70,10 @@
     </div>
   </section>
 
+  <!--Alerts-->
+
+  {% include 'partials/_alerts.html' %}
+
   <!-- Listings -->
   <section id="listings" class="py-5">
     <div class="container">
@@ -107,7 +116,7 @@
                 </div>
                 <div class="row text-secondary pb-2">
                   <div class="col-6">
-                    <i class="fas fa-clock"></i> {{listing.data_time | timesince}}</div>
+                    <i class="fas fa-clock"></i> {{listing.list_date | timesince}}</div>
                 </div>
                 <hr>
                 <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>

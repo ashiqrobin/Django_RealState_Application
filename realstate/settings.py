@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'pages',
     'listings',
     'realtors',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,11 @@ STATICFILES_DIRS = [STATIC_DIR,]
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+#Message
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    
+}
